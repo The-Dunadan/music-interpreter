@@ -3,7 +3,7 @@ CFLAGS=-Wall
 
 build: main.out
 
-main.out:
+main.out: clean
 	$(CC) $(CFLAGS) main.c -o main.out
 
 run: main.out
