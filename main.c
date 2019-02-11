@@ -3,12 +3,12 @@
 
 
 int main() {
-	/*system("paplay sound-library/out.ogg");
-	system("paplay sound-library/out1.ogg");
-	system("paplay sound-library/out2.ogg");*/
-
-	system("paplay a1.ogg");
-	system("paplay a1.ogg");
-	system("paplay a1.ogg");
-	system("paplay a1.ogg");
+	system("paplay sound-library/cn4-1.ogg");
+	system("paplay sound-library/dn4-1.ogg");
+	system("paplay sound-library/en4-1.ogg");
+	system("paplay sound-library/fn4-1.ogg");
+	system("paplay sound-library/gn4-1.ogg");
+	system("paplay sound-library/an3-1.ogg");
+	system("paplay sound-library/bn3-1.ogg");
+	system("paplay sound-library/cn3-1.ogg");
 }
