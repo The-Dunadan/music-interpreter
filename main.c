@@ -3,5 +3,5 @@
 
 
 int main() {
-	int status = system("paplay out.ogg");
+	int status = system("paplay sound-library/out.ogg");
 }
