@@ -15,7 +15,7 @@ Planned assets:
 
 Musical notation:\
 A note is represented as follows: "[a-g][s,n,f][1-8]-[1-9]+([\.]?[0-9]+)?" and delimited with the '/' (forward slash character).\
-Explanation:\
+Explanation:
 - First character represents the note, 'a' to 'g'.\
 - Second character represents the pitch alteration ('s' for sharp, 'f' for flat, 'n' for neither or natural).\
 - Third character represents the octave in one digit.\
