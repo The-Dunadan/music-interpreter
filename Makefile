@@ -1,13 +1,4 @@
-CC=gcc
-CFLAGS=-Wall
+INTERP=python3
 
-build: main.out
-
-main.out:
-	$(CC) $(CFLAGS) main.c -o main.out
-
-run: main.out
-	./main.out
-
-clean:
-	rm *.out
+run:
+	python3 main.py
