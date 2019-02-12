@@ -11,3 +11,12 @@ Planned assets:
 - File format equivalent to sheet music
 - Text to sound interpretor
 - Sound library
+
+
+Musical notation:
+A note is represented as follows: "[a-g][s,n,f][1-8]-[1-9]+([\.]?[0-9]+)?" and delimited with the '/' (forward slash character).
+Explanation: * First character represents the note, 'a' to 'g'.
+			 * Second character represents the pitch alteration ('s' for sharp, 'f' for flat, 'n' for neither or natural).
+			 * Third character represents the octave in one digit.
+			 * Fourth character is a delimitor, '-'
+			 * Then comes the duration of the note. E.g: 4 for a quarter note, 8 for an eight, etc.
