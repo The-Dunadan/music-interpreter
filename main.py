@@ -8,6 +8,7 @@ player = "paplay"
 soundLibraryPath = "sound-library/"
 songLibraryPath = "songs/"
 audioFileType = ".ogg"
+instruments = ["electrical-guitar/", "violin/"]
 
 
 # user input
@@ -18,9 +19,15 @@ for i in range(len(songs)):
 songNumber = int(input('Type in the number coresponding to the song '
 					 + 'you would like to hear or 0 if you would like '
 					 + 'to provide your own song: ')) - 1
+for i in range(len(instruments)):
+	print(str(i + 1) + ". " + instruments[i])
+instrument = int(input('Type the number coresponding to the instrument '
+					 + 'you would like to hear interpreting the song: ')) - 1
+
 if songNumber >= 0:
 	tmnFile = open(songLibraryPath + songs[songNumber], "r")
 	chords = tmnFile.read().replace('\n', '').split('/')
+	tmnFile.close()
 	print(chords)
 else:
 	#TODO
@@ -46,5 +53,6 @@ for i in range(len(chords)):
 	print(chord)
 	notes = chord.split('|')
 	for note in notes:
-		subprocess.Popen([player, soundLibraryPath + note + audioFileType])
+		subprocess.Popen([player, soundLibraryPath + instruments[instrument] 
+			                                       + note + audioFileType])
 	time.sleep(4/durations[i])
