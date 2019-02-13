@@ -21,3 +21,5 @@ Explanation:
 - Third character represents the octave in one digit.
 - Fourth character is a delimitor, '-'
 - Then comes the duration of the note. E.g: 4 for a quarter note, 8 for an eight, etc.
+
+Notes played simultaneously (call them chords) are delimited by '|' (pipe symbol). THe next chord is played after the shortest of the notes is finished playing.
