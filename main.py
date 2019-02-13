@@ -15,11 +15,16 @@ songs = os.listdir(songLibraryPath)
 songs.sort()
 for i in range(len(songs)):
 	print(str(i + 1) + ". " + songs[i])
-songNumber = int(input('Type in the number coresponding to the song you would like to hear: ')) - 1
-
-tmnFile = open(songLibraryPath + songs[songNumber], "r")
-chords = tmnFile.read().replace('\n', '').split('/')
-print(chords)
+songNumber = int(input('Type in the number coresponding to the song '
+					 + 'you would like to hear or 0 if you would like '
+					 + 'to provide your own song: ')) - 1
+if songNumber >= 0:
+	tmnFile = open(songLibraryPath + songs[songNumber], "r")
+	chords = tmnFile.read().replace('\n', '').split('/')
+	print(chords)
+else:
+	#TODO
+	exit()
 
 
 # compute chord durations
