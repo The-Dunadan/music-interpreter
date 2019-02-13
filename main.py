@@ -6,7 +6,7 @@ audioFileType = ".ogg"
 
 
 tmnFile = open("songs/first.tmn", "r")
-notes = tmnFile.read().replace('\n', '').split('/')
+notes = tmnFile.read().replace('\n', '').split('|')
 print(notes)
 
 for note in notes:
