@@ -1,31 +1,41 @@
 import subprocess
-import re
 import time
+import os
 
+
+# constants
 player = "paplay"
 soundLibraryPath = "sound-library/"
+songLibraryPath = "songs/"
 audioFileType = ".ogg"
 
 
-tmnFile = open("songs/hobbit's song.tmn", "r")
+# user input
+songs = os.listdir(songLibraryPath)
+songs.sort()
+for i in range(len(songs)):
+	print(str(i + 1) + ". " + songs[i])
+songNumber = int(input('Type in the number coresponding to the song you would like to hear: ')) - 1
+
+tmnFile = open(songLibraryPath + songs[songNumber], "r")
 chords = tmnFile.read().replace('\n', '').split('/')
 print(chords)
 
+
+# compute chord durations
 durations = [0] * len(chords)
 for i in range(len(chords)):
 	chord = chords[i]
-	print(chord)
 	for j in range(len(chord)):
 		if chord[j] == '-':
 			duration = chord[j + 1:]
 			duration = duration[0 : (duration.find('|') if duration.find('|') != -1 
 				                                        else len(duration))]
-			#print(int(duration))
 			if int(duration) > durations[i]:
 				durations[i] = int(duration)
 
-#print(durations)
 
+# play the song
 for i in range(len(chords)):
 	chord = chords[i]
 	print(chord)
